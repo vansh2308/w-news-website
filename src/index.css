@@ -9,6 +9,9 @@
   padding: 0;
   font-family: 'Inter', sans-serif;
 }
+*{
+  overflow-x: hidden;
+}
 button{
   cursor: pointer;
 }
@@ -50,4 +53,8 @@ button{
 }
 .footer-item:hover .footer-item-title{
   color: #dd615f;
+}
+
+.mobile-menu{
+  background-color: rgba(50, 50, 50, 0.892);
 }

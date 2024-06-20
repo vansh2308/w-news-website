@@ -1,5 +1,6 @@
 import React from 'react'
 import web3 from "./../assets/image-web-3-desktop.jpg"
+import web3mobile from "./../assets/image-web-3-mobile.jpg"
 
 const new_list = [
   {
@@ -27,7 +28,7 @@ const new_list = [
 
 const RightPanel = (props) => {
   return (
-    <div className='w-full bg-black right-panel p-8 text-white'>
+    <div className='w-full bg-black right-panel p-8 text-white max-[850px]:max-h-[80vh] max-[850px]:mt-5'>
       <h2 className='font-bold text-4xl text-gold'> New </h2>
 
       {
@@ -55,18 +56,20 @@ const NewItem = (props) => {
 
 const GridWrapper = () => {
   return (
-    <div className='w-full mt-10 grid-wrapper gap-8'>
-      <div className="img-container w-full col-start-1 col-end-3"></div>
+    <div className='w-full mt-10 grid-wrapper gap-8 max-[850px]:flex max-[850px]:flex-col max-[850px]:h-max max-[850px]:mt-5'>
+      <div className="img-container w-full col-start-1 col-end-3 max-[850px]:hidden "></div>
+
+      <img src={web3mobile} className='w-full aspect-square hidden max-[850px]:block' />
 
       <div className='h-full min-h-fit col-start-1 col-end-2 row-start-2 row-end-4'>
-        <h2 className='font-black text-5xl leading-20'> The Bright Future of Web 3.0</h2>
+        <h2 className='font-black text-5xl leading-20 max-[850px]:text-4xl'> The Bright Future of Web 3.0?</h2>
       </div>
 
       <div className='h-full min-h-fit col-start-2 col-end-3 row-start-2 row-end-4 flex flex-col justify-between'>
-        <p className='text-md text-greyd max-h-5/6 mb-8 w-5/6'>
+        <p className='text-md text-greyd max-h-5/6 mb-8 w-5/6 max-[850px]:w-full max-[850px]:mb-5'>
           We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling it's promise ?
         </p>
-        <button className='w-fit px-6 py-2 bg-black text-white text-xs tracking-widest'> READ MORE </button>
+        <button className='w-fit px-6 py-3 bg-black text-white text-xs tracking-widest'> READ MORE </button>
       </div>
 
       <RightPanel />

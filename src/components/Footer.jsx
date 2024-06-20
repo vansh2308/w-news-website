@@ -15,7 +15,6 @@ const footer_list = [
     content: "What happens when old PCs are given modern upgrades?"
   },
   {
-    // img: require( "./../assets/image-gaming-growth.jpg"),
     img: img3,
     title: "Reviving Retro PCs",
     content: "What happens when old PCs are given modern upgrades?"
@@ -26,7 +25,7 @@ const footer_list = [
 
 export default function Footer(props){
   return (
-    <div className='w-full h-fit my-10 mt-16 flex footer justify-between'>
+    <div className='w-full h-fit my-10 mt-16 flex footer justify-between max-[850px]:flex-col max-[850px]:gap-5'>
       
       {
         footer_list.map((item, idx) => {
@@ -37,22 +36,14 @@ export default function Footer(props){
         })
       }
 
-      
-
-      {/* <FooterItem img={img1} />
-      <FooterItem img={img2} />
-      <FooterItem img={img3} /> */}
-
-
-
     </div>
   )
 }
 
 const FooterItem = (props) => {
   return (
-    <div className='flex w-1/3 footer-item pr-8'>
-      <img src={props.img} className='h-40' />
+    <div className='flex w-1/3 footer-item pr-8 max-[850px]:w-full'>
+      <img src={props.img} className='h-auto' />
       <div>
         <h3 className='text-greyl text-3xl font-bold'> {'0' + (props.idx +1)} </h3>
         <p className='font-bold my-3 text-base hover:text-orange footer-item-title'> {props.title} </p>
