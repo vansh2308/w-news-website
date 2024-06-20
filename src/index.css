@@ -12,6 +12,9 @@
 button{
   cursor: pointer;
 }
+::-webkit-scrollbar{
+  display: none;
+}
 .grid-wrapper{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
