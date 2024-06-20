@@ -6,7 +6,7 @@ import MobileMenu from "./components/MobileMenu"
 
 
 function App() {
-  const [mobileMenuDisplay, setMobileMenuDisplay] = useState(true)
+  const [mobileMenuDisplay, setMobileMenuDisplay] = useState(false)
   function handleMobileMenuDisplay(newVal){
     setMobileMenuDisplay(newVal)
   }
